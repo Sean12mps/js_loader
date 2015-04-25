@@ -1,4 +1,4 @@
-=== Cpack by Calibreworks.com ===
+=== Javascript Loader by Ivan Kristianto ===
 Contributors: ivankristianto
 Tags: widget, social, shortcodes
 Stable tag: 0.0.1
@@ -9,6 +9,6 @@ A rocket booster for WordPress and Calibrefx Themes Framework.
 
 == Description ==
 
-[Cpack](https://github.com/calibreworks/cpack) is a WordPress plugin that give more value and boost your WordPress website.
+[js_loader](https://github.com/calibreworks/js_loader) is a WordPress plugin that give more value and boost your WordPress website.
 
-For more information, check out on [Github](https://github.com/calibreworks/cpack).
+For more information, check out on [Github](https://github.com/calibreworks/js_loader).
