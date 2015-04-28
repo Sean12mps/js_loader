@@ -55,6 +55,7 @@ class Js_Loader {
 		self::$libraries = array(
 			'wow' => array(
 				'name'				=> 'WOW',
+				'description'		=> 'jQuery plugin for animation on scroll',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/wow.min.js',
 				'css_file'			=> JSLOADER__PLUGIN_URL . '/assets/css/animate.css',
@@ -63,6 +64,7 @@ class Js_Loader {
 			),
 			'owl.carousel' => array(
 				'name'				=> 'Owl Carousel',
+				'description'		=> 'jQuery plugin for creating carousel and sliders',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/owl.carousel.min.js',
 				'css_file'			=> JSLOADER__PLUGIN_URL . '/assets/css/owl.carousel.css',
@@ -70,7 +72,8 @@ class Js_Loader {
 				'dependency_css'	=> '',
 			),
 			'jquery.smoothState' => array(
-				'name'				=> 'Jquery SmoothState',
+				'name'				=> 'jQuery SmoothState',
+				'description'		=> 'jQuery plugin for smooth page transitions',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.smoothState.js',
 				'css_file'			=> '',
@@ -79,6 +82,7 @@ class Js_Loader {
 			),
 			'jquery.nicescroll' => array(
 				'name'				=> 'jQuery NiceScroll',
+				'description'		=> 'jQuery plugin for a nice scroll effect',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.nicescroll.min.js',
 				'css_file'			=> '',
@@ -87,6 +91,7 @@ class Js_Loader {
 			),
 			'fullpage' => array(
 				'name'				=> 'Full Page',
+				'description'		=> 'jQuery plugin for a nice full page scroll',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.fullPage.js',
 				'css_file'			=> '',
@@ -95,6 +100,7 @@ class Js_Loader {
 			),
 			'cycle2' => array(
 				'name'				=> 'Cycle2 Slider',
+				'description'		=> 'jQuery plugin for creating sliders',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.cycle2.min.js',
 				'css_file'			=> '',
@@ -103,6 +109,7 @@ class Js_Loader {
 			),
 			'stellar' => array(
 				'name'				=> 'Stellar JS',
+				'description'		=> 'jQuery plugin for parallax!',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.stellar.js',
 				'css_file'			=> '',
@@ -111,6 +118,7 @@ class Js_Loader {
 			),
 			'angular' => array(
 				'name'				=> 'Angular JS',
+				'description'		=> 'JavaScript framework for creating web applications',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/angular.min.js',
 				'css_file'			=> '',
@@ -119,6 +127,7 @@ class Js_Loader {
 			),
 			'okzoom' => array(
 				'name'				=> 'OK Zoom',
+				'description'		=> 'JavaScript plugin for a nice zoom hover effect',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/okzoom.js',
 				'css_file'			=> '',
@@ -127,6 +136,7 @@ class Js_Loader {
 			),
 			'okvideo' => array(
 				'name'				=> 'OK Video',
+				'description'		=> 'JavaScript plugin for embedding youtube video as background',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/okvideo.js',
 				'css_file'			=> '',
