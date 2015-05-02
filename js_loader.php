@@ -3,10 +3,10 @@
  * Plugin Name: Javascript Loader
  * Plugin URI: https://github.com/calibreworks/js_loader
  * Description: Javascript easy loader a compliment to support Calibrefx Themes Framework
- * Version: 0.0.1
- * Author: ivankristianto
- * Author URI: https://www.calibreworks.com
- * Requires at least: 4.0
+ * Version: 0.1.0
+ * Author: Ivan Kristianto
+ * Author URI: https://www.ivankristianto.com
+ * Requires at least: 4.1
  * Tested up to: 4.2
  *
  * Text Domain: js_loader
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'JSLOADER__MINIMUM_WP_VERSION', '4.1' );
-define( 'JSLOADER__VERSION',            '0.0.1' );
+define( 'JSLOADER__VERSION',            '0.1.0' );
 define( 'JSLOADER__PLUGIN_DIR',         plugin_dir_path( __FILE__ ) );
 define( 'JSLOADER__PLUGIN_URL',         plugins_url( '', __FILE__ ) );
 define( 'JSLOADER__PLUGIN_FILE',        __FILE__ );
