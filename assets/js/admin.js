@@ -1,10 +1,11 @@
 jQuery(document).ready(function( $ ) {
 	
-	$('pre').hide();
+	$('.jsl-example').hide();
 
-	$('p + p').css({
+	$('.jsl-default-setting-toggle').css({
 		cursor: 'pointer'
 	}).html('View starter code').on('click', function(){
-		$( this ).next().fadeToggle();
+		$( this ).next('.jsl-example').fadeToggle();
 	})
+
 });

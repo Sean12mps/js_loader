@@ -1,17 +1,17 @@
-pre{
+.jsl-example{
 	background-color: white;
 	padding: 1em;
 }
-.form-table td,
-.form-table th,
-.form-table tr,
-.form-table tbody,
-.form-table{
+.jsl-wrapper .form-table td,
+.jsl-wrapper .form-table th,
+.jsl-wrapper .form-table tr,
+.jsl-wrapper .form-table tbody,
+.jsl-wrapper .form-table{
 	display: block;
 	width: 100%;
 	max-width: 480px;
 	padding: 0;
 }
-fieldset{
+.jsl-wrapper fieldset{
 	padding: 1em;
 }

@@ -52,7 +52,7 @@ class Js_Loader_Admin {
 	}
 
 	public function plugin_page(){ ?>
-		<div class="wrap">
+		<div class="wrap jsl-wrapper">
 			<form method="post" action="options.php">
 	    		<?php
 	                // This prints out all hidden setting fields
@@ -87,14 +87,14 @@ class Js_Loader_Admin {
 			if ($example == FALSE){
 				$example = '';
 			} else {
-				$example = '<p>Default setting example:</p>' . '<pre>' . $example . '</pre>';
+				$example = '<p class="jsl-default-setting-toggle">Default setting example:</p>' . '<pre class="jsl-example">' . $example . '</pre>';
 			}
 
 			add_settings_field(
 	            'jsloader_' . $key, // ID
 	            
 	            '<hr><h4>' . $library[ 'name' ] . '</h4><hr>' . // Title
-	            '<p>' . $library[ 'description'] . '</p>' . // Description
+	            '<p class="description">' . $library[ 'description'] . '</p>' . // Description
 	            $example , // Settings
 	            
 	            array( $this, 'field_callback' ), // Callback
