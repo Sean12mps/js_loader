@@ -32,7 +32,7 @@ class Js_Loader_Admin {
 	}
 
 	/**
-	 * Enqueue styles
+	 * Enqueue scripts
 	 */
 	public function admin_scripts() {
 		global $wp_scripts;
@@ -84,7 +84,7 @@ class Js_Loader_Admin {
 		foreach ( Js_Loader::get_libraries() as $key => $library ) {
 			add_settings_field(
 	            'jsloader_' . $key, // ID
-	            '<h2>' . $library[ 'name' ] . '</h2>' . '<br><em>' . $library[ 'description'] . '</em>', // Description, // Title
+	            '<h2>' . $library[ 'name' ] . '</h2>' . '<br><p>' . $library[ 'description'] . '</p>', // Description, // Title
 	            array( $this, 'field_callback' ), // Callback
 	            'js_loader_settings', //Page slug
 	            'jsloader_settings_section', // Section
