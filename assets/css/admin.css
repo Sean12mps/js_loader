@@ -1,0 +1,17 @@
+pre{
+	background-color: white;
+	padding: 1em;
+}
+.form-table td,
+.form-table th,
+.form-table tr,
+.form-table tbody,
+.form-table{
+	display: block;
+	width: 100%;
+	max-width: 480px;
+	padding: 0;
+}
+fieldset{
+	padding: 1em;
+}

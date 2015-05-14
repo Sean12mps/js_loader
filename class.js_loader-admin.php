@@ -32,7 +32,7 @@ class Js_Loader_Admin {
 	}
 
 	/**
-	 * Enqueue styles
+	 * Enqueue scripts
 	 */
 	public function admin_scripts() {
 		global $wp_scripts;
@@ -53,7 +53,6 @@ class Js_Loader_Admin {
 
 	public function plugin_page(){ ?>
 		<div class="wrap">
-			<h2><?php esc_html_e( 'JS Loader Settings', 'js_loader' ); ?></h2>
 			<form method="post" action="options.php">
 	    		<?php
 	                // This prints out all hidden setting fields
@@ -76,18 +75,34 @@ class Js_Loader_Admin {
 
 		add_settings_section( 
 			'jsloader_settings_section', 
-			esc_html__( 'My Custom Settings', 'js_loader' ), 
+			esc_html__( 'JS Loader Settings', 'js_loader' ), 
 			'__return_false', 
 			'js_loader_settings'  //Page slug
 		);
 
 		foreach ( Js_Loader::get_libraries() as $key => $library ) {
+			
+			$example = @file_get_contents($library['settings']);
+			
+			if ($example == FALSE){
+				$example = '';
+			} else {
+				$example = '<p>Default setting example:</p>' . '<pre>' . $example . '</pre>';
+			}
+
 			add_settings_field(
 	            'jsloader_' . $key, // ID
-	            '<h2>' . $library[ 'name' ] . '</h2>' . '<br><em>' . $library[ 'description'] . '</em>', // Description, // Title
+	            
+	            '<hr><h4>' . $library[ 'name' ] . '</h4><hr>' . // Title
+	            '<p>' . $library[ 'description'] . '</p>' . // Description
+	            $example , // Settings
+	            
 	            array( $this, 'field_callback' ), // Callback
+	           
 	            'js_loader_settings', //Page slug
+	           
 	            'jsloader_settings_section', // Section
+	           
 	            $key
 	        );
 		}
@@ -118,8 +133,8 @@ class Js_Loader_Admin {
         
 		printf(
             "<fieldset>
-				<label title='enable'><input type='radio' name='jsloader_option[$field]' value='1' ".checked( $checked, 1, false ).">Enable</label>
-				<label title='disable'><input type='radio' name='jsloader_option[$field]' value='0' ".checked( $checked, 0, false ).">Disable</label>
+				<label title='enable'><input type='radio' name='jsloader_option[$field]' value='1' ".checked( $checked, 1, false ).">Enqueue</label>
+				<label title='disable'><input type='radio' name='jsloader_option[$field]' value='0' ".checked( $checked, 0, false ).">Dequeue</label>
             </fieldset>"
         );
     }

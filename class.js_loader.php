@@ -47,18 +47,30 @@ class Js_Loader {
 				if( !empty( $libraries[$key]['css_file'] ) ){
 					wp_enqueue_style( $key, $libraries[$key]['css_file'], $libraries[$key]['dependency_css'], false );
 				}
+				wp_enqueue_script( $key, $libraries[$key]['settings'], $libraries[$key]['dependency_js'], false, $libraries[$key]['in_footer']);
 			}
 		}
 	}
 
 	public static function get_libraries(){
 		self::$libraries = array(
+			'clockworks' => array(
+				'name'				=> 'Clockworks',
+				'description'		=> 'JavaScript plugin for managing JavaScript Functions',
+				'in_footer'			=> false,
+				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/clockworks.js',
+				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/clockworks.default.js',
+				'dependency_js'		=> array( '' ),
+				'dependency_css'	=> array( '' ),
+			),
 			'wow' => array(
 				'name'				=> 'WOW',
 				'description'		=> 'jQuery plugin for animation on scroll',
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/wow.min.js',
 				'css_file'			=> JSLOADER__PLUGIN_URL . '/assets/css/animate.css',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/wow.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> '',
 			),
@@ -68,6 +80,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/owl.carousel.min.js',
 				'css_file'			=> JSLOADER__PLUGIN_URL . '/assets/css/owl.carousel.css',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/owl.carousel.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> '',
 			),
@@ -77,6 +90,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.smoothState.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/jquery.smoothState.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> array( '' ),
 			),
@@ -86,6 +100,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.nicescroll.min.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/jquery.nicescroll.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> array( '' ),
 			),
@@ -95,6 +110,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.fullPage.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/jquery.fullPage.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> array( '' ),
 			),
@@ -104,6 +120,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.cycle2.min.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/jquery.cycle2.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> array( '' ),
 			),
@@ -113,6 +130,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.stellar.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/jquery.stellar.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> array( '' ),
 			),
@@ -122,6 +140,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/angular.min.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/angular.default.js',
 				'dependency_js'		=> array( '' ),
 				'dependency_css'	=> array( '' ),
 			),
@@ -131,6 +150,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/okzoom.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/okzoom.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> array( '' ),
 			),
@@ -140,6 +160,7 @@ class Js_Loader {
 				'in_footer'			=> true,
 				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/okvideo.js',
 				'css_file'			=> '',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/okvideo.default.js',
 				'dependency_js'		=> array( 'jquery' ),
 				'dependency_css'	=> array( '' ),
 			),
