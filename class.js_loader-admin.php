@@ -82,11 +82,12 @@ class Js_Loader_Admin {
 
 		foreach ( Js_Loader::get_libraries() as $key => $library ) {
 			
-			$example = @file_get_contents($library['settings']);
+			$example = '';
+			if( !empty( $library['settings'] ) ){
+				$example = @file_get_contents($library['settings']);
+			}
 			
-			if ($example == FALSE){
-				$example = '';
-			} else {
+			if( $example ){
 				$example = '<p class="jsl-default-setting-toggle">Default setting example:</p>' . '<pre class="jsl-example">' . $example . '</pre>';
 			}
 
