@@ -64,6 +64,16 @@ class Js_Loader {
 				'dependency_js'		=> array( '' ),
 				'dependency_css'	=> array( '' ),
 			),
+			'sidr' => array(
+				'name'				=> 'Sidr',
+				'description'		=> 'jQuery plugin for creating mobile menus',
+				'in_footer'			=> false,
+				'js_file'			=> JSLOADER__PLUGIN_URL . '/assets/js/jquery.sidr.min.js',
+				'css_file'			=> JSLOADER__PLUGIN_URL . '/assets/css/jquery.sidr.dark.css',
+				'settings'			=> JSLOADER__PLUGIN_URL . '/assets/js/settings/jquery.sidr.min.default.js',
+				'dependency_js'		=> array( 'jquery' ),
+				'dependency_css'	=> array( '' ),
+			),
 			'wow' => array(
 				'name'				=> 'WOW',
 				'description'		=> 'jQuery plugin for animation on scroll',

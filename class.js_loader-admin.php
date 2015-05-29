@@ -93,7 +93,7 @@ class Js_Loader_Admin {
 			add_settings_field(
 	            'jsloader_' . $key, // ID
 	            
-	            '<hr><h4>' . $library[ 'name' ] . '</h4><hr>' . // Title
+	            '<h4>' . $library[ 'name' ] . '</h4>' . // Title
 	            '<p class="description">' . $library[ 'description'] . '</p>' . // Description
 	            $example , // Settings
 	            

@@ -1,17 +1,26 @@
-.jsl-example{
-	background-color: white;
-	padding: 1em;
+.jsl-example {
+    background-color: white;
+    padding: 1em;
 }
+
 .jsl-wrapper .form-table td,
 .jsl-wrapper .form-table th,
 .jsl-wrapper .form-table tr,
 .jsl-wrapper .form-table tbody,
-.jsl-wrapper .form-table{
-	display: block;
-	width: 100%;
-	max-width: 480px;
-	padding: 0;
+.jsl-wrapper .form-table {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    padding: 0;
 }
-.jsl-wrapper fieldset{
-	padding: 1em;
+
+.jsl-wrapper fieldset {
+    padding: 1em;
+}
+
+.jsl-wrapper .form-table tr {
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 1em;
 }
